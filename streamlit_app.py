@@ -2,7 +2,8 @@ import openai
 import re
 import streamlit as sl
 
-
+openai.organization = sl.secrets["organization"]
+openai.api_key = sl.secrets["key"]
 
 temp = sl.sidebar.slider("Craziness of ideas",0.0,1.0,0.5)
 
